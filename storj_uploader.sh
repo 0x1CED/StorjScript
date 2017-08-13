@@ -14,6 +14,8 @@ echo File name $FILENAME
 
 #creates a 1 gig file. Modify to your suiting
 dd if=/dev/urandom of=$FILENAME bs=1024 count=1M
+#alternatively, openssl is a faster option
+#openssl rand -out $FILENAME -base64 $(( 2**30 * 3/4 ))
 
 while :
 do
